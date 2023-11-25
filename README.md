@@ -2,6 +2,18 @@ This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Ne
 
 ## Getting Started
 
+**Description**
+
+The Voting DApp is a decentralized application (DApp) built with Next.js, Tailwind CSS, and ethers.js that allows users to vote for different candidates on the Polygon Mumbai network. The application provides a simple and responsive user interface for voting, adding voters, and viewing election results.
+
+**Features**
+
+ - Users can vote for candidates from a selection.
+ - Contract owner can add new voters by providing their Ethereum addresses.
+ - Real-time updates of election results.
+ - Responsive and user-friendly interface.
+ - Integration with Discord for event notifications.
+
 First, run the development server:
 
 ```bash
