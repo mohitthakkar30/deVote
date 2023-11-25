@@ -59,12 +59,20 @@ const Home: NextPage = () => {
       <Head>
         <title>Voting</title>
       </Head>
-      <div className="container mx-auto flex items-center justify-between bg-red-400">
+    
+      <nav>
+      
         <h1 className="text-4xl">Voting</h1>
-        <ConnectButton />
-      </div>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="flex justify-center items-center bg-yellow-500">
+       
+       
+       <ConnectButton></ConnectButton>
+       
+      </nav>
+      
+      
+      <div className="grid">
+        <div className="center">
+        <div className="wrapper">
           <select onChange={(e) => setName(e.target.value)}>
             <option selected>Select to vote</option>
             <option value="Vitalik">Vitalik</option>
@@ -72,45 +80,51 @@ const Home: NextPage = () => {
             <option value="Satoshi">Satoshi</option>
             <option value="Sandeep">Sandeep</option>
           </select>
-          <button className="bg-blue-500" onClick={vote}>
+          <button className="vote-btn" onClick={vote}>
             Vote
           </button>
         </div>
-        <div className="bg-green-500">
+        <div className="wrapper">
           <input
+          className="input-box"
             type="text"
             placeholder="Enter address to give permission for vote"
             onChange={(e) => setVoterAddress(e.target.value)}
           />
-          <button className="bg-blue-500" onClick={addVoter}>
+          <button className="vote-btn" onClick={addVoter}>
             Add Voter
           </button>
         </div>
-        <div>
-          <h1>Results</h1>
-          <button className="bg-blue-500" onClick={getResult}>
+        </div>
+
+        <div className="center">
+        <div className="center pd-1">
+          <h2>Results</h2>
+          <button className="vote-btn result-btn" onClick={getResult}>
             Get Result
           </button>
-          <table>
+        </div>
+        
+          <table className="border border-collapse border-black">
             <tr>
-              <th>Candidate</th>
-              <th>Votes</th>
+              <th className="border">Candidate</th>
+              <th className="border">Votes</th>
             </tr>
             <tr>
-              <td>Vitalik</td>
-              <td>{response[0]}</td>
+              <td className="border">Vitalik</td>
+              <td className="border">{response[0]}</td>
             </tr>
             <tr>
-              <td>JD</td>
-              <td>{response[1]}</td>
+              <td className="border">JD</td>
+              <td className="border">{response[1]}</td>
             </tr>
             <tr>
-              <td>Satoshi</td>
-              <td>{response[2]}</td>
+              <td className="border">Satoshi</td>
+              <td className="border">{response[2]}</td>
             </tr>
             <tr>
-              <td>Sandeep</td>
-              <td>{response[3]}</td>
+              <td className="border">Sandeep</td>
+              <td className="border">{response[3]}</td>
             </tr>
           </table>
         </div>
